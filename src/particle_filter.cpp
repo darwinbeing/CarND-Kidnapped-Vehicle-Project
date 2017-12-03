@@ -127,9 +127,9 @@ void ParticleFilter::updateWeights(double sensor_range, double std_landmark[],
   //   3.33
   //   http://planning.cs.uiuc.edu/node99.html
 
-  double sig_x = std_landmark[0];
-  double sig_y = std_landmark[1];
-  double gauss_norm = (1.0/(2 * M_PI * sig_x * sig_y));
+  const double sig_x = std_landmark[0];
+  const double sig_y = std_landmark[1];
+  const double gauss_norm = (1.0/(2 * M_PI * sig_x * sig_y));
 
   for (int i = 0; i < particles.size(); i++) {
     double x = particles[i].x;
